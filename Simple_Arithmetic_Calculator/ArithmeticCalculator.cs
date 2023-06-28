@@ -10,10 +10,10 @@ namespace Simple_Arithmetic_Calculator
     {
         static void Main()
         {
-            Console.WriteLine("Простой арифметический калькулятор");
-            DataFromConsole data = new DataFromConsole();
-            getData(data);
-            Console.WriteLine($"Результат: {calculate(data)}");
+            Console.WriteLine("Простой арифметический калькулятор"); // выводим приветственное сообщение
+            DataFromConsole data = new DataFromConsole(); // создаем объект класа DataFromConsole
+            getData(data); // вносим данные в созданный объект используя функцию getData - число1, операцию и число2
+            Console.WriteLine($"Результат: {calculate(data)}"); // вывод результата работы функции calculate 
         }
 
         class DataFromConsole
