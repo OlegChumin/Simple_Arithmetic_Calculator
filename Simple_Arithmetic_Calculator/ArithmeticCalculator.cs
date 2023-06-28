@@ -12,20 +12,19 @@ namespace Simple_Arithmetic_Calculator
         {
             while (true)
             {
-                runCaclulating();
-
-                Console.WriteLine("Хотите прекратить новые вычисления?, нажмите \"Y\"(да)?");
+                runCalculating();
+                Console.WriteLine("Хотите прекратить вычисления? нажмите \"Y\"(да) ");
                 string reaction = Console.ReadLine();
-
-                if (reaction.Equals("Y", StringComparison.OrdinalIgnoreCase) || reaction.Equals("Yes", StringComparison.OrdinalIgnoreCase))
+                if (reaction.Equals("Y", StringComparison.OrdinalIgnoreCase) ||
+                    reaction.Equals("Yes", StringComparison.OrdinalIgnoreCase))
                 {
                     Console.WriteLine("Спасибо за работу с программой. До встречи!");
-                    break; // выход из цикла
+                    break;
                 }
             }
         }
 
-        static void runCaclulating() 
+        static void runCalculating()
         {
             Console.WriteLine("Простой арифметический калькулятор"); // выводим приветственное сообщение
             DataFromConsole data = new DataFromConsole(); // создаем объект класа DataFromConsole
@@ -74,6 +73,9 @@ namespace Simple_Arithmetic_Calculator
                     break;
                 case '/':
                     result = data.number_1 / data.number_2;
+                    break;
+                case '%':
+                    result = data.number_1 % data.number_2;
                     break;
                 default:
                     Console.WriteLine("Операция не распознана");
